@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="add_product">Write your task here</string>
+    <string name="submit">Submit</string>
+    <string name="deleteAll">Clear all</string>
+    <string name="deleteSelected">Delete selected</string>
+</resources>
