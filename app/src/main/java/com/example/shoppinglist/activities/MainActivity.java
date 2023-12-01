@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shoppinglist.R;
 import com.example.shoppinglist.adapters.ProductAdapter;
-import com.example.shoppinglist.model.Product;
 
 public class MainActivity extends Activity {
 
@@ -31,7 +30,7 @@ public class MainActivity extends Activity {
         submitButton = findViewById(R.id.bSubmit);
         deleteAllButton = findViewById(R.id.bDeleteAll);
 
-        productAdapter = new ProductAdapter();
+        productAdapter = new ProductAdapter(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(productAdapter);
         submitButton.setOnClickListener(this::onSubmitClickListener);
@@ -40,9 +39,9 @@ public class MainActivity extends Activity {
 
     private void onSubmitClickListener(View v) {
         String productName = addTaskEditText.getText().toString();
-        addTaskEditText.setText(R.string.add_product);
+        addTaskEditText.setText("");
 
-        productAdapter.add(new Product(productName));
+        productAdapter.add(productName);
     }
 
     private void onDeleteAllButtonClickListener(View v) {

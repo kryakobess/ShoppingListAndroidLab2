@@ -15,7 +15,7 @@
             android:id="@+id/add_product_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_product"
+            android:hint="@string/add_product"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,16 +36,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_below="@id/bSubmit"
             android:text="@string/deleteAll"
-            android:textSize="16sp" />
-        <Button
-            android:id="@+id/bDeleteSelected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_below="@id/bDeleteAll"
-            android:text="@string/deleteSelected"
-            android:visibility="gone"
             android:textSize="16sp" />
     </RelativeLayout>
 
